@@ -7,12 +7,11 @@ import { environment } from "src/environments/environment";
 })
 export class GeorideAPIService {
   authToken: string | null = null;
+  trackerId: number = 0;
 
   constructor(private http: HttpClient) {
-    this.initAuthToken();
+    this.authToken = environment.authToken;
+    this.trackerId = environment.trackerId;
   }
 
-  private initAuthToken(): void {
-    this.authToken = environment.authToken;
-  }
 }

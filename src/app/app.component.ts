@@ -11,6 +11,6 @@ export class AppComponent implements OnInit {
   constructor(private georideAPIService: GeorideAPIService) { }
 
   ngOnInit(): void {
-    console.log(this.georideAPIService.authToken);
+    console.log(this.georideAPIService);
   }
 }

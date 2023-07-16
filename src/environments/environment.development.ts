@@ -1,3 +1,4 @@
 export const environment = {
-    authToken: "georide-auth-token" // Follow the instructions here: https://api.georide.fr/#api-User-LoginUser
+    authToken: "georide-auth-token", // Follow instructions here: https://api.georide.fr/#api-User-LoginUser
+    trackerId: 0, // Follow instructions here: https://api.georide.fr/#api-User-UserTrackers
 };

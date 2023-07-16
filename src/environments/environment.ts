@@ -1,3 +1,4 @@
 export const environment = {
-    authToken: ""
+    authToken: "",
+    trackerId: 0,
 };
