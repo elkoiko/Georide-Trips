@@ -1,0 +1,8 @@
+<div class="">
+    <h2 class="text-center text-5xl my-6 text-orange-600">Motorcycle trips</h2>
+    <div class="flex justify-center flex-wrap gap-4">
+        <ng-container *ngFor="let trip of trips">
+            <app-trip-card [trip]="trip"></app-trip-card>
+        </ng-container>
+    </div>
+</div>

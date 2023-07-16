@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TripCardComponent } from './components/trip-card/trip-card.component';
+import { TripsListComponent } from './components/trips-list/trips-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    TripCardComponent
+    TripCardComponent,
+    TripsListComponent
   ],
   imports: [
     BrowserModule,
