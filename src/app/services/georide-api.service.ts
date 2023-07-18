@@ -32,7 +32,6 @@ export class GeorideAPIService {
 
     if (environment.useFakeData) {
       return new Observable((subscriber) => {
-        console.log(fakeTrips);
         subscriber.next(fakeTrips);
         subscriber.complete();
       });

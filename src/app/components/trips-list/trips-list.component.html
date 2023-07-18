@@ -1,7 +1,9 @@
 <div class="">
     <h2 class="text-center text-5xl my-6 text-orange-600">Motorcycle trips</h2>
     <div class="flex justify-evenly flex-wrap gap-4">
-        <h3 *ngIf="trips === undefined || trips.length <= 0" class="text-2xl">No trips available</h3>
+        <h3 *ngIf="loading" class="text-2xl">Fetching trips...</h3>
+        <h3 *ngIf="!loading && (trips === undefined || trips.length <= 0)" class="text-2xl">No trips available</h3>
+        <p *ngIf="errorMessage" class="text-red-500">{{ errorMessage }}</p>
         <ng-container *ngFor="let trip of trips">
             <app-trip-card [trip]="trip"></app-trip-card>
         </ng-container>

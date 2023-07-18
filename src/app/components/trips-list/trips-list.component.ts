@@ -9,13 +9,29 @@ import { GeorideAPIService } from "src/app/services/georide-api.service";
 export class TripsListComponent implements OnInit {
 
   trips: GeorideAPITrip[] = [];
+  fromDate: Date = new Date();
+  toDate: Date = new Date();
+  loading: boolean = true;
+  errorMessage: string | null = null;
 
   constructor(private GeorideApiService: GeorideAPIService) {
+    this.fromDate.setDate(this.toDate.getDate() - 7); // 1 week interval
   }
 
   ngOnInit(): void {
-    this.GeorideApiService.getTrips(new Date('2021-01-01'), new Date('2021-01-02')).subscribe((trips) => {
-      this.trips = trips;
-    });
+    this.GeorideApiService.getTrips(this.fromDate, this.toDate).subscribe(
+      {
+        next: trips => {
+          this.trips = trips;
+        },
+        error: error => {
+          console.log(error);
+          this.errorMessage = "An error happened while fetching trips.";
+        },
+        complete: () => {
+          this.loading = false;
+        }
+      }
+    );
   }
 }
