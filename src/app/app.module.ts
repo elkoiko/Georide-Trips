@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { TripCardComponent } from './components/trip-card/trip-card.component';
 import { TripsListComponent } from './components/trips-list/trips-list.component';
 import { GeorideAddressPipe } from './pipes/georide-address.pipe';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { GeorideAddressPipe } from './pipes/georide-address.pipe';
     HeaderComponent,
     TripCardComponent,
     TripsListComponent,
-    GeorideAddressPipe
+    GeorideAddressPipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
