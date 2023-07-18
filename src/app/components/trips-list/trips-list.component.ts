@@ -8,4 +8,7 @@ import { GeorideAPITrip } from "src/app/models/GeorideAPI/GeorideAPI.type";
 export class TripsListComponent {
 
   @Input() trips: GeorideAPITrip[] = [];
+
+  constructor() { 
+  }
 }
