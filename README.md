@@ -11,6 +11,7 @@ Configure the `environment.development.ts` file for development or `environment.
 export const environment = {
     authToken: "georide-auth-token", // Follow instructions here: https://api.georide.fr/#api-User-LoginUser
     trackerId: 0, // Follow instructions here: https://api.georide.fr/#api-User-UserTrackers
+    useFakeData: true, // Set to true to use fake data instead of fetching data from Georide API
 };
 ```
 
@@ -21,3 +22,6 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The appl
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Screenshots
+![Georide Trips home page](/docs/georide-trips-home.png?raw=true "Georide Trips home page")
