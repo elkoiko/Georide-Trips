@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TripCardComponent } from './components/trip-card/trip-card.component';
 import { TripsListComponent } from './components/trips-list/trips-list.component';
+import { GeorideAddressPipe } from './pipes/georide-address.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TripCardComponent,
-    TripsListComponent
+    TripsListComponent,
+    GeorideAddressPipe
   ],
   imports: [
     BrowserModule,
