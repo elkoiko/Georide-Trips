@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { GeorideAPIService } from "./services/georide-api.service";
+import { Component } from '@angular/core';
+import { GeorideAPITrip } from "./models/GeorideAPI/GeorideAPI.type";
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,8 @@ import { GeorideAPIService } from "./services/georide-api.service";
 })
 export class AppComponent {
   title = 'Georide-Trips';
+  trips: GeorideAPITrip[] = [];
 
-  constructor() { }
+  constructor() {
+  }
 }

@@ -7,20 +7,25 @@ export interface GeorideAPIAuthToken {
 }
 
 export interface GeorideAPITrip {
-    id: number | null;
-    trackerId: number;
-    averageSpeed: number;
-    distance: number;
-    duration: number;
-    startAddress: string;
-    niceStartAddress: string;
-    startLat: number;
-    startLon: number;
-    endAddress: string;
-    niceEndAddress: string;
-    endLat: number;
-    endLon: number;
-    startTime: Date;
-    endTime: Date;
-    staticImage: string;
+    id: number | null,
+    trackerId: number,
+    averageSpeed: number,
+    maxSpeed: number,
+    distance: number,
+    duration: number,
+    startAddress: string,
+    niceStartAddress: string | null,
+    startLat: number,
+    startLon: number,
+    endAddress: string,
+    niceEndAddress: string | null,
+    endLat: number,
+    endLon: number,
+    startTime: string,
+    endTime: string,
+    staticImage: string,
+    maxAngle: number,
+    maxLeftAngle: number,
+    maxRightAngle: number,
+    averageAngle: number,
   }
