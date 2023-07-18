@@ -6,7 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class GeorideAddressPipe implements PipeTransform {
 
   transform(value: string, ...args: unknown[]): string {
-    return value.substring(1).replaceAll(",", ", ");
+    const address = value.split(",");
+    return (address.length >= 2) ? address[1] : "Unknown";
   }
 
 }
